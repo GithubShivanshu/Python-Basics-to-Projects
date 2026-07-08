@@ -1,62 +1,62 @@
 # This is a dictionary in Python. It contains key-value pairs where each key is unique and maps to a specific value. 
-# d = {} # This is an empty dictionary. You can add key-value pairs to it later.
-# marks = {
-#     "Shivanshu": 100,
-#     "Rohan": 56,
-#     0: "Mohan"
-# }
-# print(marks) # This will output the entire dictionary, showing the keys and their corresponding values.
-# # --------------//-------------------
-# # Methods of dictionary
-# # 1. keys() - This method returns a view object that displays a list of all the keys in the dictionary.
-# print(marks.keys()) # This will output the keys of the dictionary: dict_keys(['Shivanshu', 'Rohan', 0])
-# # 2. values() - This method returns a view object that displays a list of all the values in the dictionary.
-# print(marks.values()) # This will output the values of the dictionary: dict_values([100, 56, 'Mohan'])
-# # 3. items() - This method returns a view object that displays a list of the dictionary's key-value tuple pairs.
-# print(marks.items()) # This will output the items of the dictionary: dict_items([('Shivanshu', 100), ('Rohan', 56), (0, 'Mohan')])
-# # 4. get() - This method returns the value for the specified key if the key is in the dictionary. If the key is not found, it returns None (or a specified default value).
-# print(marks.get("Shivanshu")) # This will output the value associated with the key "Shivanshu": 100
-# print(marks.get("Alice")) # This will output None since the key "Alice" is not in the dictionary
-# print(marks.get("Alice", "Key not found")) # This will output "Key not found" since the key "Alice" is not in the dictionary.
-# marks.update({"Shivanshu": 99, "Ritika": 88}) # This will update the value for "Shivanshu" to 99 and add a new key-value pair for "Ritika": 88
-# print(marks) # This will output the updated dictionary: {'Shivanshu': 99, 'Rohan': 56, 0: 'Mohan', 'Ritika': 88}
+d = {} # This is an empty dictionary. You can add key-value pairs to it later.
+marks = {
+    "Shivanshu": 100,
+    "Rohan": 56,
+    0: "Mohan"
+}
+print(marks) # This will output the entire dictionary, showing the keys and their corresponding values.
+# --------------//-------------------
+# Methods of dictionary
+# 1. keys() - This method returns a view object that displays a list of all the keys in the dictionary.
+print(marks.keys()) # This will output the keys of the dictionary: dict_keys(['Shivanshu', 'Rohan', 0])
+# 2. values() - This method returns a view object that displays a list of all the values in the dictionary.
+print(marks.values()) # This will output the values of the dictionary: dict_values([100, 56, 'Mohan'])
+# 3. items() - This method returns a view object that displays a list of the dictionary's key-value tuple pairs.
+print(marks.items()) # This will output the items of the dictionary: dict_items([('Shivanshu', 100), ('Rohan', 56), (0, 'Mohan')])
+# 4. get() - This method returns the value for the specified key if the key is in the dictionary. If the key is not found, it returns None (or a specified default value).
+print(marks.get("Shivanshu")) # This will output the value associated with the key "Shivanshu": 100
+print(marks.get("Alice")) # This will output None since the key "Alice" is not in the dictionary
+print(marks.get("Alice", "Key not found")) # This will output "Key not found" since the key "Alice" is not in the dictionary.
+marks.update({"Shivanshu": 99, "Ritika": 88}) # This will update the value for "Shivanshu" to 99 and add a new key-value pair for "Ritika": 88
+print(marks) # This will output the updated dictionary: {'Shivanshu': 99, 'Rohan': 56, 0: 'Mohan', 'Ritika': 88}
 # # 5. pop() - This method removes the specified key and returns the corresponding value. If the key is not found, it raises a KeyError.
-# removed_value = marks.pop("Rohan") # This will remove the key "Rohan" and return its value
-# print(removed_value) # This will output the value that was removed: 56
-# print(marks) # This will output the dictionary after removing the key "Rohan": {'Shivanshu': 99, 0: 'Mohan', 'Ritika': 88}
-# # 6. popitem() - This method removes and returns the last inserted key-value pair as a tuple. If the dictionary is empty, it raises a KeyError.
-# last_item = marks.popitem() # This will remove and return the last inserted key-value pair
-# print(last_item) # This will output the last inserted key-value pair that was removed: ('Ritika', 88)
-# print(marks) # This will output the dictionary after removing the last inserted key-value pair: {'Shivanshu': 99, 0: 'Mohan'}
-# # 7. clear() - This method removes all items from the dictionary, leaving it empty.
-# marks.clear() # This will clear all items from the dictionary
-# print(marks) # This will output the empty dictionary: {}
-# # 8. copy() - This method returns a shallow copy of the dictionary.
-# marks_copy = marks.copy() # This will create a shallow copy of the dictionary
-# print(marks_copy) # This will output the copy of the dictionary: {}
-# # 9. fromkeys() - This method creates a new dictionary with keys from the specified iterable and values set to the specified value (default is None).
-# new_dict = dict.fromkeys(["a", "b", "c"], 0) # This will create a new dictionary with keys "a", "b", and "c", all set to the value 0
-# print(new_dict) # This will output the new dictionary: {'a': 0, 'b': 0, 'c': 0}
-# # 10. setdefault() - This method returns the value of the specified key. If the key does not exist, it inserts the key with the specified value (default is None).
-# value = marks.setdefault("Shivanshu", 100) # This will return the value for the key "Shivanshu" if it exists, otherwise it will insert "Shivanshu" with the value 100
-# print(value) # This will output the value associated with the key "Shivanshu": 100
-# print(marks) # This will output the dictionary after setting the default value for the key "Shivanshu": {'Shivanshu': 100}
-# # 11. del - This statement removes the specified key from the dictionary. If the key is not found, it raises a KeyError.
-# del marks["Shivanshu"] # This will remove the key "Shivanshu" from the dictionary
-# print(marks) # This will output the dictionary after deleting the key "Shivanshu": {}
-# # 12. len() - This function returns the number of items (key-value pairs) in the dictionary.
-# print(len(marks)) # This will output the number of items in the dictionary: 0
-# # 13. in - This operator checks if a specified key exists in the dictionary and returns True or False.
-# print("Shivanshu" in marks) # This will output False since the key "Shivanshu" has been deleted from the dictionary
-# # 14. not in - This operator checks if a specified key does not exist in the dictionary and returns True or False.
-# print("Shivanshu" not in marks) # This will output True since the key "Shivanshu" has been deleted from the dictionary
-# # 15. clear() - This method removes all items from the dictionary, leaving it empty.
-# marks.clear() # This will clear all items from the dictionary
-# print(marks) # This will output the empty dictionary: {}
+removed_value = marks.pop("Rohan") # This will remove the key "Rohan" and return its value
+print(removed_value) # This will output the value that was removed: 56
+print(marks) # This will output the dictionary after removing the key "Rohan": {'Shivanshu': 99, 0: 'Mohan', 'Ritika': 88}
+# 6. popitem() - This method removes and returns the last inserted key-value pair as a tuple. If the dictionary is empty, it raises a KeyError.
+last_item = marks.popitem() # This will remove and return the last inserted key-value pair
+print(last_item) # This will output the last inserted key-value pair that was removed: ('Ritika', 88)
+print(marks) # This will output the dictionary after removing the last inserted key-value pair: {'Shivanshu': 99, 0: 'Mohan'}
+# 7. clear() - This method removes all items from the dictionary, leaving it empty.
+marks.clear() # This will clear all items from the dictionary
+print(marks) # This will output the empty dictionary: {}
+# 8. copy() - This method returns a shallow copy of the dictionary.
+marks_copy = marks.copy() # This will create a shallow copy of the dictionary
+print(marks_copy) # This will output the copy of the dictionary: {}
+# 9. fromkeys() - This method creates a new dictionary with keys from the specified iterable and values set to the specified value (default is None).
+new_dict = dict.fromkeys(["a", "b", "c"], 0) # This will create a new dictionary with keys "a", "b", and "c", all set to the value 0
+print(new_dict) # This will output the new dictionary: {'a': 0, 'b': 0, 'c': 0}
+# 10. setdefault() - This method returns the value of the specified key. If the key does not exist, it inserts the key with the specified value (default is None).
+value = marks.setdefault("Shivanshu", 100) # This will return the value for the key "Shivanshu" if it exists, otherwise it will insert "Shivanshu" with the value 100
+print(value) # This will output the value associated with the key "Shivanshu": 100
+print(marks) # This will output the dictionary after setting the default value for the key "Shivanshu": {'Shivanshu': 100}
+# 11. del - This statement removes the specified key from the dictionary. If the key is not found, it raises a KeyError.
+del marks["Shivanshu"] # This will remove the key "Shivanshu" from the dictionary
+print(marks) # This will output the dictionary after deleting the key "Shivanshu": {}
+# 12. len() - This function returns the number of items (key-value pairs) in the dictionary.
+print(len(marks)) # This will output the number of items in the dictionary: 0
+# 13. in - This operator checks if a specified key exists in the dictionary and returns True or False.
+print("Shivanshu" in marks) # This will output False since the key "Shivanshu" has been deleted from the dictionary
+# 14. not in - This operator checks if a specified key does not exist in the dictionary and returns True or False.
+print("Shivanshu" not in marks) # This will output True since the key "Shivanshu" has been deleted from the dictionary
+# 15. clear() - This method removes all items from the dictionary, leaving it empty.
+marks.clear() # This will clear all items from the dictionary
+print(marks) # This will output the empty dictionary: {}
 # --------------//-------------------
 # This is a set in Python. It is an unordered collection of unique elements.
-# e = set() # This is an empty set. You can add elements to it later.
-# print(type(e)) # This will output the type of the variable 'e', which is <class 'set'>
+e = set() # This is an empty set. You can add elements to it later.
+print(type(e)) # This will output the type of the variable 'e', which is <class 'set'>
 s = {1,2,5,3,5,23, "shivanshu"} # This is a set with some duplicate elements. The duplicates will be removed automatically.
 print(s) # This will output the set: {1, 2, 3, 23, 5, "shivanshu"}
 s.add(56) # This will add the element 56 to the set
