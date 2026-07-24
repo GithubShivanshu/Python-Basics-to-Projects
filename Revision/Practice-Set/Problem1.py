@@ -1,4 +1,4 @@
-from playsound import playsound
+from playsound3.playsound3 import playsound
 # playsound module is used to play audio files/mp3 files in python.
 print("Playing your audio now... 🎧")
 
